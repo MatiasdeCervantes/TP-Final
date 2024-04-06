@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Aqui podrás editar a los autores
+{% endblock %}
+
+{% block parrafo %}
+
+<form action="", method="post"> {% csrf_token %}
+
+    <table>
+    
+        {{formu.as_table}}    
+    
+    </table>
+    
+    
+    <input type="submit" value="Guardar">
+    
+    </form>
+{% endblock %}

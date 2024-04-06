@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Aqui podrás ver a los subgeneros que busques dentro del terror
+{% endblock %}
+
+{% block parrafo %}
+
+<ol>
+    {% for valor in total %}
+
+        <li>Subgenero: {{valor.subgenero}}, Editorial: {{valor.editorial}}</li>
+        
+        {% if user.is_authenticated %}
+        <a href="{% url 'SubgenerosEditar' valor.id %}">  Editar Subgenero  </a>
+        
+        
+        <a href="{% url 'SubgeneroEliminar' valor.id %}">  Eliminar Subgenero  </a>
+        {% endif %}
+    
+    {% endfor %}
+
+    
+</ol>
+    
+<a class="btn btn-primary" href="{% url 'SubgeneroCrear' %}">  Crear Subgenero  </a>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Aqui podrás ver a los mejores autores del terror
+{% endblock %}
+
+{% block parrafo %}
+
+<ol>
+    {% for valor in total %}
+
+        <li>Nombre: {{valor.nombre}}</li>
+        
+        {% if user.is_authenticated %}
+        <a href="{% url 'AutoresEditar' valor.id %}">  Editar Autor  </a>
+        
+        
+        <a href="{% url 'AutoresEliminar' valor.id %}">  Eliminar Autor  </a>
+        {% endif %}
+    
+    {% endfor %}
+
+    
+</ol>
+    
+<a class="btn btn-primary" href="{% url 'AutoresCrear' %}">  Crear Autor  </a>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Buscar subgenero
+{% endblock %}
+
+{% block parrafo %}
+
+<form action="", method="GET">
+
+    <p>
+
+        <input type="text", name="subgenero">
+
+        <input type="submit", value="Buscar">
+
+    </p>
+
+
+</form>
+
+
+<p>{{mensaje}}</p>
+
+{% for subgenero_busqueda in resultado %}
+
+    <p>{{subgenero_busqueda}}</p>
+
+{% endfor %}
+
+{% endblock %}

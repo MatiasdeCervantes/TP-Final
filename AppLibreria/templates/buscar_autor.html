@@ -1,0 +1,31 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Buscar autor
+{% endblock %}
+
+{% block parrafo %}
+
+<form action="", method="GET">
+
+    <p>
+
+        <input type="text", name="nombre">
+
+        <input type="submit", value="Buscar">
+
+    </p>
+
+
+</form>
+
+
+<p>{{mensaje}}</p>
+
+{% for autor_busqueda in resultado %}
+
+    <p>{{autor_busqueda}}</p>
+
+{% endfor %}
+
+{% endblock %}

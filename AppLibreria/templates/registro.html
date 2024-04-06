@@ -1,0 +1,18 @@
+{% extends "padre.html" %}
+
+{% block titulo %}
+Aqui puedes registrarte
+{% endblock %}
+
+{% block parrafo %}
+
+<form action="", method="POST"> {% csrf_token %}
+
+    {{formulario}}
+
+    <button type="submit">Registrarse</button>
+
+</form>
+
+
+{% endblock %}
